@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+
 	"github.com/nats-io/go-nats"
 	"log"
 	"os"
+
 	"time"
 )
 
@@ -36,5 +37,5 @@ func main() {
 		}
 		ec.Publish(msg.Reply, p)
 	})
-	fmt.Scanln()
+	select {}
 }
